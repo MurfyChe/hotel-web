@@ -1,0 +1,70 @@
+body{
+    background: lightgreen;
+    section{
+        background: lightblue;
+        width: 500px;
+        height: 500px;
+        font-size: $sizeText;
+
+        &:hover{
+            background: lightcoral;
+        }
+    }
+}
+//variables
+$sizeText: 16px;
+//list of data
+$sizeList: (0.75rem, 1rem, 1.25rem);
+
+p{
+    font-size: nth($sizeList, 1); //selecteaza primu element din lista (1) / index from 
+}
+
+//Not Compiled
+/*
+    Compile
+    Compress
+*/
+
+/*!
+    
+*/
+
+
+@use "sass:map";
+$screenSize:(
+    small:350px,
+    medium:600px,
+    large:1000px
+);
+
+div{
+    max-width: map-get($screenSize, small);
+}
+
+$animals:(
+    dog:"../multimedia/dog.jpg",
+    cat:"../multimedia/cat.jpg"
+);
+
+@each $key, $value in $animals {
+    .animals-#{$key} {
+        background-image: url($value);
+    }
+}
+
+
+//if-else
+$bootlean: true;
+
+
+header{
+    @if $bootlean {
+        background-size: auto;
+        background-image: -moz-element();
+        margin: 0 10px 0 10px;
+    }
+    @else {
+        backdrop-filter: blur();
+    }
+}
