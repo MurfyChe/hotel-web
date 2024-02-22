@@ -6,9 +6,9 @@ $accent-color: #28a745; // Green
 // Base styles for the main page
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
+    z-index: 100;
 }
 
 h1 {
@@ -31,6 +31,7 @@ h1 {
 
 .hotels-container {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center; 
     gap: 20px; 
@@ -43,6 +44,7 @@ h1 {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
+    width: calc(20% - 20px);
 
     h2 {
         margin-top: 0;
@@ -50,12 +52,15 @@ h1 {
 
     .book-btn {
         background-color: $primary-color; // Use primary color
+        margin-right: 10px;
+        margin-left: 50px;
         color: #fff;
         border: none;
         padding: 10px 20px;
         border-radius: 5px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        font-size: 17px;
 
         &:hover {
             background-color: darken($primary-color, 10%); // Darken primary color on hover
@@ -108,4 +113,22 @@ h1 {
     &:hover {
         background-color: darken(#28a745, 10%); /* Darken accent color on hover */
     }
+}
+
+.button-phone-container {
+    display: flex;
+    align-items: center;
+}
+
+.phone {
+    background-color: $primary-color; // Use primary color
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 17px;
+}
+
+img{
+    border-radius: 15px;
 }
