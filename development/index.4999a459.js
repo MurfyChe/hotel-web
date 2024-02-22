@@ -30,7 +30,7 @@ hotels.forEach((hotel)=>{
     popup.innerHTML = `
       <div class="popup-content">
         <span class="close">&times;</span>
-        <h2>Popup Content for Hotel ${hotelId}</h2>
+        <h2>Booking Page for Hotel ${hotelId}</h2>
         <input placeholder="Full Legal Name">
         <input placeholder="Phone Number">
         <input placeholder="Mail">

@@ -14,7 +14,14 @@ body {
 h1 {
     text-align: center;
     margin-top: 50px;
+    font-size: 36px; 
+    color: #333; 
+    text-transform: uppercase; 
+    font-weight: bold; 
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); 
 }
+
 
 #hotels {
     display: flex;
@@ -24,15 +31,15 @@ h1 {
 
 .hotels-container {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; 
     gap: 20px; 
 }
 
 .hotel {
-    background-color: #fff;
+    background-color: whitesmoke;
     padding: 20px;
-    border-radius: 5px;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
@@ -76,29 +83,29 @@ h1 {
     padding: 20px;
     border-radius: 5px;
     position: relative;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
 
-    
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #333; /* Change close button color */
+}
 
-    .close {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        cursor: pointer;
-        font-size: 20px;
-    }
+.popup-content .send-btn {
+    background-color: #28a745; /* Use accent color */
+    color: #fff;
+    border: none;
+    padding: 12px 24px; /* Increase padding for the send button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Add space between input fields and the send button */
 
-    // Apply accent color to the send button in the popup
-    .send-btn {
-        background-color: $accent-color; // Use accent color
-        color: #fff;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-
-        &:hover {
-            background-color: darken($accent-color, 10%); // Darken accent color on hover
-        }
+    &:hover {
+        background-color: darken(#28a745, 10%); /* Darken accent color on hover */
     }
 }
